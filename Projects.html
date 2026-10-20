@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects - Khaalid’s Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+      background-color: #f8f9fa;
+      scroll-behavior: smooth;
+    }
+
+    .navbar {
+      background-color: #000000;
+    }
+
+    .navbar-brand,
+    .nav-link {
+      color: white !important;
+      font-weight: 500;
+    }
+
+    .navbar-logo {
+      height: 40px;
+      margin-right: 10px;
+      border-radius: 5px;
+    }
+
+    #page-header {
+      background: linear-gradient(to right, #072450, #4b0bb2);
+      color: white;
+      text-align: center;
+      padding: 100px 20px;
+    }
+
+    #page-header h1 {
+      font-weight: 700;
+      font-size: 2.8rem;
+    }
+
+    .project-section {
+      padding: 60px 0;
+    }
+
+    .project {
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+      overflow: hidden;
+      margin-bottom: 50px;
+      transition: transform 0.3s ease;
+    }
+
+    .project:hover {
+      transform: translateY(-5px);
+    }
+
+    .project img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .project-content {
+      padding: 30px;
+    }
+
+    .project-content h3 {
+      color: #0d6efd;
+      font-weight: 600;
+    }
+
+    .project-content p {
+      color: #555;
+    }
+
+    footer {
+      background-color: #010101;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    footer a {
+      color: #ffc107;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    .modal-body img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+
+    .image-tag {
+      display: inline-block;
+      background-color: #0d6efd;
+      color: white;
+      border-radius: 30px;
+      padding: 5px 12px;
+      font-size: 0.9rem;
+      margin: 5px;
+    }
+
+    .btn-gradient {
+      background: linear-gradient(to right, #072450, #4b0bb2);
+      border: none;
+      color: white;
+      font-weight: 500;
+      padding: 10px 20px;
+      border-radius: 30px;
+      transition: 0.3s ease;
+    }
+
+    .btn-gradient:hover {
+      opacity: 0.9;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="images/portfolio.logo.png" alt="Logo" class="navbar-logo">
+        Khaalid’s Web Portfolio
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="About.html">About</a></li>
+          <li class="nav-item"><a class="nav-link active" href="Projects.html">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="Contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <section id="page-header">
+    <div class="container">
+      <h1>My Projects</h1>
+      <p class="lead">A showcase of my web development and design work</p>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section class="project-section container">
+
+    <!-- Photoshop Project -->
+    <div class="row project align-items-center">
+      <div class="col-md-6">
+        <img src="images/PH.LOGO.jpg" alt="Photoshop Design">
+      </div>
+      <div class="col-md-6 project-content">
+        <h3>Photoshop Creations</h3>
+        <p>
+          A series of creative graphic designs and digital art pieces showcasing my Photoshop skills and
+          attention to
+          visual detail.
+        </p>
+        <button class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#photoshopModal">
+          View Work
+        </button>
+      </div>
+    </div>
+
+    <!-- VS Code Projects -->
+    <div class="row project align-items-center flex-md-row-reverse">
+
+      <div class="col-md-6">
+        <img src="images/VSCODE.LOGO.jpg" alt="VS Code Project" class="img-fluid">
+      </div>
+
+      <div class="col-md-6 project-content">
+        <h3>VS Code Projects</h3>
+
+        <p>
+          Hand-coded responsive websites built using HTML, CSS, JavaScript, and Bootstrap — demonstrating
+          layout
+          precision and creative UI concepts.
+        </p>
+
+        <!-- Project Slots -->
+        <div class="project-slots">
+
+          <!-- Slot 1 -->
+          <div class="project-slot mb-3 p-2 border rounded">
+            <h6>Python parking system for malls </h6>
+            <p class="mb-1 small">
+              This is a python parking system build for malls and shopping centers
+            </p>
+            <a href="https://github.com/Khaalid-hattas/python-assignment-511.git" target="_blank">
+              GitHub Repo
+            </a>
+          </div>
+
+          <div class="project-slot mb-3 p-2 border rounded">
+            <h6>Product page with html-css</h6>
+            <p class="mb-1 small">
+
+              This project is a static product page with beautiful html-css.
+            </p>
+            <a href="https://github.com/Khaalid-hattas/Exercise3-products.git" target="_blank">
+              GitHub Repo
+            </a>
+          </div>
+
+          <div class="project-slot mb-3 p-2 border rounded">
+            <h6>Python Minit-toolkit System</h6>
+            <p class="mb-1 small">
+              A mini-toolkit system to play around with python tools.
+            </p>
+            <a href="https://github.com/Khaalid-hattas/Python_toolkit.git" target="_blank">
+              GitHub Repo
+            </a>
+          </div>
+
+        </div>
+
+        <!-- Main Button -->
+        <a href="https://github.com/Khaalid-hattas" class="btn btn-outline-primary btn-sm mt-2" target="_blank">
+          View Projects
+        </a>
+
+      </div>
+    </div>
+
+    <!-- ASP.NET -->
+    <div class="row project align-items-center">
+      <div class="col-md-6">
+        <img src="images/microsoftvisualstudio.jpg" alt="ASP.NET Project">
+      </div>
+      <div class="col-md-6 project-content">
+        <h3>ASP.NET Applications</h3>
+        <p>
+
+          Full-stack web projects created using Visual Studio 2022, ASP.NET, and SQL Server — integrating
+          modern
+          back-end logic with responsive front-end design.
+        </p>
+        <button class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#visualStudioModal">
+          View Work
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Photoshop Modal -->
+  <div class="modal fade" id="photoshopModal" tabindex="-1" aria-labelledby="photoshopModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="photoshopModalLabel">Photoshop Creations Gallery</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img src="images/SAFEHAVENSHELTERcopy.jpg" alt="Poster Design">
+          <div><span class="image-tag">Poster Design</span><span class="image-tag">Typography</span></div>
+
+          <img src="images/sandmancopy.jpg" alt="Logo Concept">
+          <div><span class="image-tag">Logo Design</span><span class="image-tag">Brand Identity</span></div>
+
+          <img src="images/weddingphotoeditedCopy copy.jpg" alt="Digital Art">
+          <div><span class="image-tag">Digital Art</span><span class="image-tag">Photo Manipulation</span>
+          </div>
+
+          <img src="images/SUNECOLOGOcopy.jpg" alt="Logo Design">
+          <div><span class="image-tag">Logo</span><span class="image-tag">Branding</span></div>
+
+          <img src="images/HOMEPAGEmockupcopy.jpg" alt="Mockup">
+          <div><span class="image-tag">UI Mockup</span><span class="image-tag">Web Concept</span></div>
+
+          <img src="images/PRICING.MOCKUPS copy.jpg" alt="Pricing Page">
+          <div><span class="image-tag">Web Layout</span><span class="image-tag">Visual Design</span></div>
+
+          <img src="images/ABOUTUScopy.jpg" alt="About Us Page">
+          <div><span class="image-tag">Corporate Design</span><span class="image-tag">Typography</span></div>
+
+          <img src="images/GALLERYcopy.jpg" alt="Gallery Page">
+          <div><span class="image-tag">Gallery</span><span class="image-tag">Layout</span></div>
+
+          <img src="images/CONTACTUScopy.jpg" alt="Contact Page">
+          <div><span class="image-tag">Contact Design</span><span class="image-tag">UI</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Visual Studio Modal (GameBlink) -->
+  <div class="modal fade" id="visualStudioModal" tabindex="-1" aria-labelledby="visualStudioModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="visualStudioModalLabel">ASP.NET Projects - GameBlink</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img src="images/gameblinkabout.png" alt="GameBlink Homepage">
+          <div>
+            <span class="image-tag">Full Stack</span>
+            <span class="image-tag">ASP.NET</span>
+            <span class="image-tag">SQL Server</span>
+          </div>
+
+          <p>
+            <strong>GameBlink</strong> is a dynamic ASP.NET web application designed for gamers to explore,
+            manage, and
+            interact with game listings.
+            Built with Visual Studio 2022, it includes database integration using SQL Server, modern
+            Bootstrap UI, and
+            smooth navigation.
+          </p>
+
+          <ul>
+            <li>Developed using ASP.NET and C#</li>
+            <li>Connected to SQL Server for data storage</li>
+            <li>Responsive and modern front-end using Bootstrap</li>
+            <li>Deployed via IIS for live local testing</li>
+          </ul>
+
+          <img src="images/gameblinkhome.png" alt="GameBlink Dashboard">
+          <div>
+            <span class="image-tag">Admin Dashboard</span>
+            <span class="image-tag">User Management</span>
+          </div>
+
+          <!-- GitHub Link -->
+          <div class="text-center mt-4">
+            <a href="https://github.com/141800764-ux/GameBlink.git" target="_blank" class="btn-gradient">
+              <i class="bi bi-github"></i> View Project on GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 Khaalid Hattas | Web Building Intelligence</p>
+    <p>Follow me on <a href="https://instagram.com/khaalid_hattas123" target="_blank">Instagram</a> | <a
+        href="https://github.com/Khaalid-hattas" target="_blank">GitHub</a></p>
+    <p>Linkedin <a href="https://www.linkedin.com/in/khaalid-hattas-092869352/" target="_blank">Linekdin</a></p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
