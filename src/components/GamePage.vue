@@ -139,6 +139,12 @@ const resetGame = () => {
   isThinking.value = false
 }
 
+const skipToPortfolio = () => {
+  window.clearTimeout(cpuTimer)
+  window.clearTimeout(redirectTimer)
+  emit('complete')
+}
+
 const selectMode = (mode) => {
   gameMode.value = mode
   resetGame()
@@ -197,6 +203,9 @@ onUnmounted(() => {
       </div>
 
       <button class="game-reset" type="button" @click="resetGame">Restart game</button>
+      <button class="game-skip" type="button" @click="skipToPortfolio">
+        Skip to portfolio
+      </button>
       <p class="game-help">
         {{ isTwoPlayer ? 'Players take turns as X and O.' : 'You are X. The CPU is O.' }}
       </p>

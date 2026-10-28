@@ -1,5 +1,6 @@
 <script setup>
 import PageHeader from './PageHeader.vue'
+import cvUrl from './CV/CURRICULUM VITAE of khaalid Hattas updated.pdf?url'
 
 defineEmits(['navigate'])
 
@@ -80,7 +81,7 @@ const journey = [
           </p>
           <div class="cv-actions">
             <a
-              href="/documents/khaalid-hattas-cv.pdf"
+              :href="cvUrl"
               class="btn btn-primary"
               target="_blank"
               rel="noopener"
@@ -88,7 +89,7 @@ const journey = [
               Open CV
             </a>
             <a
-              href="/documents/khaalid-hattas-cv.pdf"
+              :href="cvUrl"
               class="btn btn-outline-primary"
               download
             >
@@ -99,7 +100,7 @@ const journey = [
 
         <div class="cv-preview">
           <iframe
-            src="/documents/khaalid-hattas-cv.pdf"
+            :src="cvUrl"
             title="Khaalid Hattas Curriculum Vitae"
           ></iframe>
         </div>

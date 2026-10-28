@@ -10,7 +10,7 @@ const projects = [
   },
   {
     image: 'VSCODE.LOGO.jpg',
-    title: 'Frontend Projects',
+    title: 'VS Code Projects',
     text: 'Responsive websites built with HTML, CSS, JavaScript, and Bootstrap.',
     button: 'View Projects',
   },

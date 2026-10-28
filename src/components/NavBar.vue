@@ -1,6 +1,6 @@
 <script setup>
-defineProps({ active: String, open: Boolean })
-defineEmits(['navigate', 'toggle'])
+defineProps({ active: String, open: Boolean, lightMode: Boolean })
+defineEmits(['navigate', 'toggle', 'toggle-theme'])
 
 const pages = ['home', 'about', 'projects', 'contact']
 </script>
@@ -31,6 +31,15 @@ const pages = ['home', 'about', 'projects', 'contact']
         >
           {{ page[0].toUpperCase() + page.slice(1) }}
         </a>
+        <button
+          class="theme-toggle"
+          type="button"
+          :aria-pressed="lightMode"
+          :aria-label="lightMode ? 'Switch to dark mode' : 'Switch to light mode'"
+          @click="$emit('toggle-theme')"
+        >
+          {{ lightMode ? '☾ Dark' : '☀ Light' }}
+        </button>
       </div>
     </div>
   </nav>
