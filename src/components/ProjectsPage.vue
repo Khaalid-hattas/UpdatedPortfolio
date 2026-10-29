@@ -48,18 +48,20 @@ const frontendProjects = [
     link: 'https://github.com/Khaalid-hattas/Python_toolkit.git',
   },
   {
-    title: 'Website Project Four',
-    text: 'Add a description for another website or application project here.',
-    image: '',
-    alt: 'Preview of Website Project Four',
-    link: '',
+    title: 'ArtisanHub',
+    text: 'A platform for artisans to showcase and sell their personalised products. Its live website is currently under maintenance.',
+    image: 'Artisanhub.png',
+    alt: 'ArtisanHub e-commerce platform preview',
+    link: 'https://github.com/Khaalid-hattas/Group6-E-COMMERCE.git',
   },
   {
-    title: 'Website Project Five',
-    text: 'Add a description for another website or application project here.',
-    image: '',
-    alt: 'Preview of Website Project Five',
-    link: '',
+    title: 'HR Modern Tech',
+    text: 'An employee management portal supporting talent management, payroll services, and employee development.',
+    image: 'hr-modern-tech.png',
+    alt: 'HR Modern Tech employee portal login page',
+    link: 'https://moderntech-hr-portal.onrender.com',
+    linkLabel: 'Live Website',
+    demoLogin: { username: 'Elijah', password: 'lat123' },
   },
 ]
 
@@ -91,6 +93,7 @@ const carouselSlides = [
     alt: 'Add a screenshot for Website Project Three',
     title: 'ArtisanHub',
     text: 'A platform for artisans to showcase and sell their personalised products.',
+    status: 'Under maintenance',
     tags: ['vue.js', 'HTML', 'CSS', 'JavaScript'],
     links: [
       { label: 'Live Website', url: 'https://group6-e-commerce-production.up.railway.app/' },
@@ -146,6 +149,9 @@ onUnmounted(() => {
         <div class="carousel-content">
           <p class="carousel-count">{{ currentSlide + 1 }} / {{ carouselSlides.length }}</p>
           <h3>{{ carouselSlides[currentSlide].title }}</h3>
+          <span v-if="carouselSlides[currentSlide].status" class="tags" role="status">
+            {{ carouselSlides[currentSlide].status }}
+          </span>
           <p>{{ carouselSlides[currentSlide].text }}</p>
           <div class="carousel-tags" aria-label="Project technologies">
             <span v-for="tag in carouselSlides[currentSlide].tags" :key="tag" class="tags">
@@ -209,6 +215,10 @@ onUnmounted(() => {
             <div class="project-slot-body">
               <h6>{{ item.title }}</h6>
               <p>{{ item.text }}</p>
+              <p v-if="item.demoLogin">
+                <strong>Demo login:</strong>
+                Username: {{ item.demoLogin.username }} · Password: {{ item.demoLogin.password }}
+              </p>
               <a
                 :href="item.link || '#'"
                 :class="{ 'project-link-placeholder': !item.link }"
@@ -218,7 +228,7 @@ onUnmounted(() => {
                 rel="noopener noreferrer"
                 @click="!item.link && $event.preventDefault()"
               >
-                {{ item.link ? 'View on GitHub' : 'Add Project Link' }}
+                {{ item.linkLabel || (item.link ? 'View on GitHub' : 'Add Project Link') }}
               </a>
             </div>
           </div>
