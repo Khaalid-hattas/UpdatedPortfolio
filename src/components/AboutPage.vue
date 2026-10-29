@@ -1,6 +1,6 @@
 <script setup>
 import PageHeader from './PageHeader.vue'
-import cvUrl from './CV/CURRICULUM VITAE of khaalid Hattas updated.pdf?url'
+import cvUrl from './CV/CURRICULUM VITAE of khaalid Hattas updated-1-2.pdf?url'
 
 defineEmits(['navigate'])
 
@@ -100,7 +100,7 @@ const journey = [
 
         <div class="cv-preview">
           <iframe
-            :src="cvUrl"
+            :src="`${cvUrl}#toolbar=0`"
             title="Khaalid Hattas Curriculum Vitae"
           ></iframe>
         </div>
