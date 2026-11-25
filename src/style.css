@@ -46,8 +46,8 @@
 }
 
 .site-shell[data-theme='light'] .hero-content {
-  background: radial-gradient(circle at 85% 20%, #d7f0fbaa 0, transparent 32%), rgb(249 253 255 / 62%);
-  backdrop-filter: blur(2px);
+  background: transparent;
+  backdrop-filter: none;
 }
 
 .site-shell[data-theme='light'] .section {
